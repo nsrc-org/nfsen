@@ -75,9 +75,7 @@ function alert_name_check(&$new_alert, $opts ) {
 
 function subject_validate (&$subject, $opts) {
 
-	if (!get_magic_quotes_gpc()) {
-   		$subject = addslashes($subject);
-	} 
+	$subject = addslashes($subject);
 	return 0;
 
 } // End of subject_validate

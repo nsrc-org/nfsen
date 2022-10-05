@@ -1155,11 +1155,7 @@ function Process_stat_tab ($tab_changed, $profile_changed) {
 		
 		if ( array_key_exists('description', $_POST ) ) {
 			$_tmp = preg_replace("/\r/", '', $_POST['description']);
-			if (!get_magic_quotes_gpc()) {
-   				$description = addslashes($_tmp);
-			} else {
-   				$description = $_tmp;
-			}
+			$description = addslashes($_tmp);
 			$cmd_opts['description'] = explode("\n", $description);
 		}
 
