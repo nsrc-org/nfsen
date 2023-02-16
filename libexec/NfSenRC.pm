@@ -95,7 +95,7 @@ sub StartCollector {
 	}
 
 	my $ziparg = $NfConf::ZIPcollected ? '-z' : '';
-	my $common_args = "-w -D -p $port -u $uid -g $gid $buffer_opts $subdirlayout -P $pidfile $ziparg $extensions";
+	my $common_args = "-D -p $port -u $uid -g $gid $buffer_opts $subdirlayout -P $pidfile $ziparg $extensions";
 	my $src_args;
 	my $optargs = '';
 	if ( scalar @SourceList > 1 ) {
